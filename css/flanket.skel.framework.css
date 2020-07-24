@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* 플롯 박스 */
+.float-box{} .float-box:after{clear:both; content:''; display:block; float:none;}
+.float-left{float:left;} .float-right{float:right;}
+
+/* 정렬 */
+.text-center{text-align:center;} .text-left{text-align:left;} .text-right{text-align:right;}
+
+/* 디바이스별로 요소 보이게 처리 { */
+    /* PC일 때 */
+    @media(min-width:1024px){
+        .view-pc{display:block;} .view-tablet{display:none;} .view-mobile{display:none;}
+        .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:none;}
+    }
+    /* 태블릿일 때 */
+    @media(min-width:768px) and (max-width:1023px) {
+        .view-pc{display:none;} .view-tablet{display:block;} .view-mobile{display:none;}
+        .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
+    }
+    /* 모바일 기기일 때 */
+    @media(max-width:767px) {
+        .view-pc{display:none;} .view-tablet{display:none;} .view-mobile{display:block;}
+        .view-pc-tablet{display:none;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
+    }
+/* } 디바이스별로 요소 보이게 처리 */
+
+/* 칼럼박스 (기본) */
+.col-box{} .col-box:after{clear:both; content:''; display:block; float:none;}
+div.col-1{float:left;width:8.3333%;} div.col-2{float:left;width:16.6666%;}
+div.col-3{float:left;width:25%;} div.col-4{float:left;width:33.3333%;}
+div.col-5{float:left;width:41.6666%;} div.col-6{float:left;width:50%;}
+div.col-7{float:left;width:58.3333%;} div.col-8{float:left;width:66.6666%;}
+div.col-9{float:left;width:75%;} div.col-10{float:left;width:83.3333%;}
+div.col-11{float:left;width:91.6666%;} div.col-12{float:left;width:100%;}
+
+/* 칼럼박스 (PC) */
+@media(min-width:1024px){
+    div.col-lg-1{float:left;width:8.3333%;} div.col-lg-2{float:left;width:16.6666%;}
+    div.col-lg-3{float:left;width:25%;} div.col-lg-4{float:left;width:33.3333%;}
+    div.col-lg-5{float:left;width:41.6666%;} div.col-lg-6{float:left;width:50%;}
+    div.col-lg-7{float:left;width:58.3333%;} div.col-lg-8{float:left;width:66.6666%;}
+    div.col-lg-9{float:left;width:75%;} div.col-lg-10{float:left;width:83.3333%;}
+    div.col-lg-11{float:left;width:91.6666%;} div.col-lg-12{float:left;width:100%;}
+}
+
+/* 칼럼박스 (Tablet) */
+@media(min-width:768px) and (max-width:1023px){
+    div.col-md-1{float:left;width:8.3333%;} div.col-md-2{float:left;width:16.6666%;}
+    div.col-md-3{float:left;width:25%;} div.col-md-4{float:left;width:33.3333%;}
+    div.col-md-5{float:left;width:41.6666%;} div.col-md-6{float:left;width:50%;}
+    div.col-md-7{float:left;width:58.3333%;} div.col-md-8{float:left;width:66.6666%;}
+    div.col-md-9{float:left;width:75%;} div.col-md-10{float:left;width:83.3333%;}
+    div.col-md-11{float:left;width:91.6666%;} div.col-md-12{float:left;width:100%;}
+}
+
+/* 칼럼박스 (Mobile) */
+@media(max-width:767px){
+    div.col-sm-1{float:left;width:8.3333%;} div.col-sm-2{float:left;width:16.6666%;}
+    div.col-sm-3{float:left;width:25%;} div.col-sm-4{float:left;width:33.3333%;}
+    div.col-sm-5{float:left;width:41.6666%;} div.col-sm-6{float:left;width:50%;}
+    div.col-sm-7{float:left;width:58.3333%;} div.col-sm-8{float:left;width:66.6666%;}
+    div.col-sm-9{float:left;width:75%;} div.col-sm-10{float:left;width:83.3333%;}
+    div.col-sm-11{float:left;width:91.6666%;} div.col-sm-12{float:left;width:100%;}
+}
+
+/* 디스플레이 속성 */
+.d-block{display:block;} .d-flex{display:flex;} .d-inline{display:inline;}
+.d-table{display:table;} .d-table-cell{display:table-cell;} .d-inline-block{display:inline-block;}
+
+/* 포지션 */
+.p-fixed{position:fixed;} .p-relative{position:relative;} .p-normal{position:inherit; position:initial;}
+.p-absolute{position:absolute;}
+
+/* 포지션 위치 */
+/*
+ * 이 부분은 JS에서 제어합니다.
+ * 사용방법 : .po-l-(숫자) .po-r-(숫자)
+*/
+
+/* 마진 / 패딩 / 길이 처리 */
+/*
+ * 이 부분은 JS에서 제어합니다.
+ * 사용방법 : .w-(숫자), .m-t-(숫자), .p-t-(숫자)
+*/
+
+/* 폰트 설정 */
+.font-noto{font-family:'NotoSansKR';}
+.font-weight-100{font-weight:100;} .font-weight-200{font-weight:200;} .font-weight-300{font-weight:300;}
+.font-weight-400{font-weight:400;} .font-weight-500{font-weight:500;} .font-weight-600{font-weight:600;}
+.font-weight-700{font-weight:700;} .font-weight-800{font-weight:800;}
