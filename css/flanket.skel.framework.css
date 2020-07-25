@@ -8,21 +8,21 @@
 .text-center{text-align:center;} .text-left{text-align:left;} .text-right{text-align:right;}
 
 /* 디바이스별로 요소 보이게 처리 { */
-    /* PC일 때 */
-    @media(min-width:1024px){
-        .view-pc{display:block;} .view-tablet{display:none;} .view-mobile{display:none;}
-        .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:none;}
-    }
-    /* 태블릿일 때 */
-    @media(min-width:768px) and (max-width:1023px) {
-        .view-pc{display:none;} .view-tablet{display:block;} .view-mobile{display:none;}
-        .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
-    }
-    /* 모바일 기기일 때 */
-    @media(max-width:767px) {
-        .view-pc{display:none;} .view-tablet{display:none;} .view-mobile{display:block;}
-        .view-pc-tablet{display:none;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
-    }
+/* PC일 때 */
+@media(min-width:1024px){
+    .view-pc{display:block;} .view-tablet{display:none;} .view-mobile{display:none;}
+    .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:none;}
+}
+/* 태블릿일 때 */
+@media(min-width:768px) and (max-width:1023px) {
+    .view-pc{display:none;} .view-tablet{display:block;} .view-mobile{display:none;}
+    .view-pc-tablet{display:block;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
+}
+/* 모바일 기기일 때 */
+@media(max-width:767px) {
+    .view-pc{display:none;} .view-tablet{display:none;} .view-mobile{display:block;}
+    .view-pc-tablet{display:none;} .view-pc-mobile{display:block;} .view-tablet-mobile{display:block;}
+}
 /* } 디바이스별로 요소 보이게 처리 */
 
 /* 칼럼박스 (기본) */
@@ -83,6 +83,13 @@ div.col-11{float:left;width:91.6666%;} div.col-12{float:left;width:100%;}
  * 이 부분은 JS에서 제어합니다.
  * 사용방법 : .w-(숫자), .m-t-(숫자), .p-t-(숫자)
 */
+
+/* 마진 처리 */
+.m-l-auto{margin-left:auto;} .m-r-auto{margin-right:auto;}
+.m-t-auto{margin-top:auto;} .m-b-auto{margin-bottom:auto;}
+
+/* 길이 처리 */
+.w-auto{width:auto;} .h-auto{height:auto;}
 
 /* 폰트 설정 */
 .font-noto{font-family:'NotoSansKR';}
